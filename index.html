@@ -66,13 +66,13 @@
 <nav id="mainnav" class="mainnav">
 <ul class="menu">
     <li><a href="index.html">Home</a>
-<li><a href="page-window.html">green materials</a>
+<li><a href="greenmaterial.html">green materials</a>
 </li>
-<li><a href="service.html">Projects</a>
+<li><a href="projects.html">Projects</a>
 </li>
 
 
-<li><a href="page-case-study.html">Products</a>
+<li><a href="gallery.html">Products</a>
 </li>
 <li class="menu-item-has-children"><a href="#">More</a>
 <ul class="sub-menu">
@@ -92,7 +92,7 @@
 </li>
 </ul>
 </li>
-<li><a href="page-contact.html">Contact</a></li>
+<li><a href="contact.html">Contact</a></li>
 </ul>
 
 </nav>
@@ -347,53 +347,6 @@ accusam
 
 
 
-
-
-<section class="portfolio text-center">
-    <div class="container-fluid portfolio-style">
-    <div class="title-section wow fadeInDown">
-    <div class="sub-title">Portfolio</div>
-    <div class="themesflat-spacer clearfix" data-desktop="19" data-mobile="19" data-smobile="15"></div>
-    <div class="flat-title">Choose Your Style</div>
-    <div class="themesflat-spacer clearfix" data-desktop="48" data-mobile="30" data-smobile="20"></div>
-    </div>
-    <div class="flat-tabs flat-tabs-type2 flat-tabs-porpolio">
-    <ul class="menu-tab">
-    <li class="active">
-    <a href="#">All Projects</a>
-    </li>
-    <li>
-    <a href="#">UI/UX</a>
-    </li>
-    <li>
-    <a href="#">Branding</a>
-    </li>
-    <li>
-    <a href="#">Web Design</a>
-    </li>
-    <li>
-    <a href="#">Printing</a>
-    </li>
-    </ul>
-    <div class="content-tab">
-    <div class="content-inner" id="projectList">
-        <!-- Project items will be dynamically inserted here -->
-    </div>
-    </div>
-    </div>
-    </div>
-    <div class="themesflat-spacer clearfix" data-desktop="120" data-mobile="60" data-smobile="50"></div>
-    </section>
-
-
-
-
-
-
-
-
-
-
 <section class="window-service2" id="window-service2">
 <div class="container text-center">
 <div class="row">
@@ -435,7 +388,7 @@ accusam
 <img src="images/Services/image1.jpg" alt="" class="image-change" />
 </div>
 <div class="flat-appointment">
-<a href="page-door.html" class="themesflat-button-style2 btn-style-3">
+<a href="gallery.html" class="themesflat-button-style2 btn-style-3">
 <span class="btn-title">VIEW All Products</span>
 </a>
 </div>
@@ -933,11 +886,12 @@ transport</a
                 const servicesList = document.getElementById('servicesList');
                 data.result.list.slice(0, 3).forEach(service => {
                     const serviceElement = document.createElement('div');
-                    serviceElement.className = 'col-sm-4';
+                    serviceElement.className='col-sm-4';
+
                     serviceElement.innerHTML = `
                         <div class="image-box wow fadeInUp animated" data-wow-delay="0ms" data-wow-duration="1500ms">
                             <div class="image">
-                                <img src="http://182.160.8.109:9501/${service.thumbnail}" alt="${service.title}" />
+                                <img src="http://182.160.8.109:9501/${service.thumbnail}"     alt="${service.title}" />
                             </div>
                             <div class="title-imagebox">
                                 <h4 class="text-center"><a href="service-details.html">${service.title}</a></h4>
@@ -946,7 +900,7 @@ transport</a
                                 <p class="text-center">${service.description}</p>
                             </div>
                             <div class="button-imagebox">
-                                <a href="service-details.html"><i class="icon-iconarrow-right"></i></a>
+                                <a href="test.html?id=${service.id}"><i class="icon-iconarrow-right"></i></a>
                             </div>
                         </div>
                     `;
